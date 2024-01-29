@@ -1,0 +1,36 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: SimpleTodoProject
+  labels:
+    app: SimpleTodoProject
+spec:
+  type: NodePort
+  selector:
+    app: SimpleTodoProject
+  ports:
+  - port: 8080
+    targetPort: 8080
+    name: http
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: SimpleTodoProject
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: SimpleTodoProject
+  template:
+    metadata:
+      labels:
+        app: SimpleTodoProject
+        version: v1
+    spec:
+      containers:
+      - name: SimpleTodoProject
+        image: SimpleTodoProject
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
