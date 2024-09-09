@@ -4,7 +4,7 @@ Es un proyecto educativo que lo único que busca es mostrar a través de código
 actividades *"por hacer"* (*to-do* en Inglés). 
 
 El proyecto ha sido implementado utilizando el estilo arquitectónico de Microservicios, utilizando la librería 
-[Helidon](https://helidon.io). Además, la implementación se base en REST.
+[Helidon](https://helidon.io). Además, la implementación se basa en REST.
 
 
 
@@ -31,7 +31,7 @@ herramienta [HTTPie](https://httpie.io)
 ```
 http GET localhost:8080/todo/all
 ```
-El comando anterior debe mostrar generar una salida que incluye un JSON más o menos así (el atributo _createAt_ puede 
+El comando anterior debe generar una salida que incluye un JSON más o menos así (el atributo _createAt_ puede 
 variar).
 
 ```json
